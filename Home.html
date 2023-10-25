@@ -2,11 +2,88 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="Styling.css">
 </head>
 
 <body>
+    <form id="Calculator">
+        <div>
+            <input type="radio" name="choice" id="Accountant">
+            <label for="Accountant">Accountant</label>
+
+            <input type="radio" name="choice" id="Software">
+            <label for="Software">Software Engineer</label>
+
+            <input type="radio" name="choice" id="Project">
+            <label for="Project">Project Manager</label>
+
+            <input type="radio" name="choice" id="Receptionist">
+            <label for="Receptionist">Receptionist</label>
+        </div>
+        <div>
+            <label for="hours">Number of working hours in a year:</label>
+            <input type="number" id="hours">
+            <input type="button" id="compute" value="Compute Annual Salary" onclick="calculate()">
+            <label for="result">Annual Salary:</label>
+            <input type="text" id="result">
+        </div>
+    </form>
+    <!--
+<img src="histogram" alt="histogram describing each job and their hourly rate">
+    -->
+    <table id="table">
+        <thead id="tablehead">
+            <tr>
+                <th>Position</th>
+                <th>Hourly Rate</th>
+            </tr>
+        </thead>
+        <tbody id="tablecontent">
+            <tr>
+                <td>Accountant</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Project Manager</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Software Engineer</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>Receptionist</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
+<script>
+    function calculate() {
+        let position;
+        let hourlyRate;
+
+        if (document.getElementById('Accountant').checked) {
+            hourlyRate = 30;
+        } else if (document.getElementById('Software').checked) {
+            hourlyRate = 35;
+        } else if (document.getElementById('Project').checked) {
+            hourlyRate = 50;
+        } else if (document.getElementById('Receptionist').checked) {
+            hourlyRate = 20;
+        } else {
+            alert("Please select a position.");
+            return;
+        }
+
+        let hours = document.getElementById('hours').value;
+
+        let annualSalary = hourlyRate * hours;
+
+        document.getElementById('result').value = annualSalary;
+    }
+</script>
 
 </html>
