@@ -20,23 +20,27 @@ body {
     text-align: center;
 }
 
+/* Background color for the hours text input */
 #hours {
     background-color: #FC8B00;
 }
 
+/* Background color for the result text input */
 #result {
     background-color: #B8D0EC;
 }
 
+/* Background color for the button */
 #compute {
     background-color: lightgrey;
 }
 
-
+/* Background color for the table head */
 #tablehead {
     background-color: #FFE599;
 }
 
+/* Style for the content of the table */
 #radioTable {
     text-align: left;
     padding: 0.52vw;
@@ -48,7 +52,7 @@ table {
     margin-right: auto;
 }
 
-
+/* Style for the Salary calculator */
 #Calculator {
     clear: both;
     padding: 1%;
@@ -59,12 +63,14 @@ table {
     width: 100%;
 }
 
+/* Border change effect on hover event */
 #leftcontent:hover,
 #middlecontent:hover,
 #rightcontent:hover {
     border: 3px solid #C5B8B0;
 }
 
+/* Generic styling to ensure the page doesn't mess up */
 html {
     position: relative;
     min-height: 100%;
@@ -149,23 +155,24 @@ td {
         padding: 0.52vw;
     }
 
-    #table th,
-    #table
-
     /* Style for table data cells */
-    td {
+    #table th,
+    #table td {
         padding-left: 2.08vw;
         padding-right: 2.08vw;
     }
 
+    /* Padding for the div */
     div {
         padding: 0.26vw;
     }
 
+    /* Input width to ensure there is enough space */
     #hours {
         width: 4vw;
     }
 
+    /* Bottom Padding to ensure the footer does not cover content */
     #Calculator {
         padding-bottom: 8vh;
     }
@@ -194,23 +201,24 @@ td {
         padding: 0.52vw;
     }
 
-    #table th,
-    #table
-
     /* Style for table data cells */
-    td {
+    #table th,
+    #table td {
         padding-left: 2.08vw;
         padding-right: 2.08vw;
     }
 
+    /* Padding for the div */
     div {
         padding: 0.26vw;
     }
 
+    /* Input width to ensure there is enough space */
     #hours {
         width: 20vw;
     }
 
+    /* Bottom Padding to ensure the footer does not cover content */
     #Calculator {
         padding-bottom: 13vh;
     }
@@ -218,16 +226,19 @@ td {
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
 
+    /* Changes in text font to ensure readability on the specific device size */
     body,
     table,
     label {
         font-size: 20px;
     }
 
+    /* Changes in text font to ensure readability on the specific device size */
     input {
         font-size: 15px;
     }
 
+    /* Changes in the radio button sizes to ensure consistency with text size */
     input[type="radio"] {
         transform: scale(1.3);
     }
@@ -253,23 +264,24 @@ td {
         padding: 0.52vw;
     }
 
-    #table th,
-    #table
-
     /* Style for table data cells */
-    td {
+    #table th,
+    #table td {
         padding-left: 2.08vw;
         padding-right: 2.08vw;
     }
 
+    /* Padding for the div */
     div {
         padding: 0.26vw;
     }
 
+    /* Input width to ensure there is enough space */
     #hours {
         width: 20vw;
     }
 
+    /* Bottom Padding to ensure the footer does not cover content */
     #Calculator {
         padding-bottom: 8vh;
     }
