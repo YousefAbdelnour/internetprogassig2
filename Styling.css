@@ -3,3 +3,274 @@ Assignment 2
 Written by: Yousef Abdelnour 2242238 
 For “Internet Programming” Section 001 – Fall 2023 
 */
+/* Style for the header element */
+header {
+    text-align: center;
+    margin-left: -0.52vw;
+    margin-right: -0.52vw;
+    margin-top: -0.52vw;
+    padding: 0.26vw;
+    border-bottom: 4px solid black;
+    background-color: #B0BEC5;
+}
+
+/* Style for the body element */
+body {
+    background-color: #E0E0E0;
+    text-align: center;
+}
+
+#hours {
+    background-color: #FC8B00;
+}
+
+#result {
+    background-color: #B8D0EC;
+}
+
+#compute {
+    background-color: lightgrey;
+}
+
+
+#tablehead {
+    background-color: #FFE599;
+}
+
+#radioTable {
+    text-align: left;
+    padding: 0.52vw;
+}
+
+/* General style for tables */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#Calculator {
+    clear: both;
+    padding: 1%;
+}
+
+/* Style for images inside the right content section */
+#rightcontent img {
+    width: 100%;
+}
+
+#leftcontent:hover,
+#middlecontent:hover,
+#rightcontent:hover {
+    border: 3px solid #C5B8B0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Style for the footer element */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #B0BEC5;
+}
+
+/* General style for anchor (link) elements */
+a {
+    text-decoration: none;
+}
+
+/* Style for anchor elements on hover */
+a:hover {
+    color: blue;
+}
+
+/* Specific style for the left content section */
+#leftcontent {
+    text-align: center;
+    border: 2px solid black;
+}
+
+/* Specific style for the right content section */
+#rightcontent {
+    border: 2px solid black;
+}
+
+/* Specific style for the middle content section */
+#middlecontent {
+    text-align: center;
+    border: 2px solid black;
+}
+
+/* General style for tables */
+table {
+    border-collapse: collapse;
+}
+
+#table th,
+#table
+
+/* Style for table data cells */
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+@media only screen and (min-width: 901px) {
+
+    /* Specific style for the left content section */
+    #leftcontent {
+        float: left;
+        width: 26%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1%;
+        margin-top: 5px;
+    }
+
+    /* Specific style for the right content section */
+    #rightcontent {
+        width: 24%;
+        float: left;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin: 0.5vh;
+    }
+
+    /* Specific style for the middle content section */
+    #middlecontent {
+        width: 26%;
+        float: left;
+        margin: 0.5vh;
+        padding: 0.52vw;
+    }
+
+    #table th,
+    #table
+
+    /* Style for table data cells */
+    td {
+        padding-left: 2.08vw;
+        padding-right: 2.08vw;
+    }
+
+    div {
+        padding: 0.26vw;
+    }
+
+    #hours {
+        width: 4vw;
+    }
+
+    #Calculator {
+        padding-bottom: 8vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Specific style for the left content section */
+    #leftcontent {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1%;
+        margin-top: 5px;
+    }
+
+    /* Specific style for the right content section */
+    #rightcontent {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 5px;
+    }
+
+    /* Specific style for the middle content section */
+    #middlecontent {
+        margin-top: 5px;
+        padding: 0.52vw;
+    }
+
+    #table th,
+    #table
+
+    /* Style for table data cells */
+    td {
+        padding-left: 2.08vw;
+        padding-right: 2.08vw;
+    }
+
+    div {
+        padding: 0.26vw;
+    }
+
+    #hours {
+        width: 20vw;
+    }
+
+    #Calculator {
+        padding-bottom: 13vh;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+
+    body,
+    table,
+    label {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 15px;
+    }
+
+    input[type="radio"] {
+        transform: scale(1.3);
+    }
+
+    /* Specific style for the left content section */
+    #leftcontent {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1%;
+        margin-top: 5px;
+    }
+
+    /* Specific style for the right content section */
+    #rightcontent {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 5px;
+    }
+
+    /* Specific style for the middle content section */
+    #middlecontent {
+        margin-top: 5px;
+        padding: 0.52vw;
+    }
+
+    #table th,
+    #table
+
+    /* Style for table data cells */
+    td {
+        padding-left: 2.08vw;
+        padding-right: 2.08vw;
+    }
+
+    div {
+        padding: 0.26vw;
+    }
+
+    #hours {
+        width: 20vw;
+    }
+
+    #Calculator {
+        padding-bottom: 8vh;
+    }
+}

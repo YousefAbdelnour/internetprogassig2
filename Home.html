@@ -1,88 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Doctype declaration to define this document as HTML5 -->
+<html lang="en"> <!-- Setting the language of the document to English -->
 
 <head>
-    <title>Salary Calculator</title>
-    <link rel="stylesheet" href="Styling.css">
+    <title>Salary Calculator</title> <!-- Title of the web page -->
+    <link rel="stylesheet" href="Styling.css"> <!-- Linking the external CSS file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta tag for responsive design -->
 </head>
 
 <body>
+    <header>
+        <h1>Salary Calculator</h1> <!-- Main heading of the page -->
+    </header>
+    <section id="maincontent"></section> <!-- Main content section (currently empty) -->
+    <section id="leftcontent" class="content">
+        <h2>Get on top of your salary!</h2> <!-- Subheading for the left content section -->
+        <p>It's very important to know on average how much you would make depending on your working hours per year!
+            So we provided a calculator that tells you how much you would make if you have a job as a Software
+            Engineer, an Accountant, a Project Manager or a Receptionist</p>
+        <!-- Description for the left content section -->
+    </section>
+
+    <section id="middlecontent" class="content">
+        <h2>Information on each career!</h2> <!-- Subheading for the middle content section -->
+        <p>We are here to provide you with the most convenient way of calculating your salary with the form visible
+            below! We also are providing you with a histogram with the careers and their salary along with a table
+            for those who like a visual picture or a written table!</p>
+        <!-- Description for the middle content section -->
+        <table id="table">
+            <thead id="tablehead">
+                <tr>
+                    <th>Position</th> <!-- Table header for position -->
+                    <th>Hourly Rate</th> <!-- Table header for hourly rate -->
+                </tr>
+            </thead>
+            <tbody id="tablecontent">
+                <!-- Table body with data rows -->
+                <tr>
+                    <td>Accountant</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Project Manager</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Software Engineer</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>Receptionist</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="rightcontent" class="content">
+        <h2>Check out this Histogram!</h2> <!-- Subheading for the right content section -->
+        <a href="histogram.png"><img src="histogram.png" alt="histogram describing each job and their hourly rate"></a>
+        <!-- Link and image of the histogram -->
+    </section>
     <form id="Calculator">
+        <!-- Form for calculating the annual salary -->
+        <table id="radioTable">
+            <!-- Table for radio button inputs -->
+            <tr>
+                <td><input type="radio" name="choice" id="Accountant"><label for="Accountant">Accountant</label>
+                </td>
+                <td><input type="radio" name="choice" id="Software"><label for="Software">Software Engineer</label>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="choice" id="Project"><label for="Project">Project Manager</label></td>
+                <td><input type="radio" name="choice" id="Receptionist"><label for="Receptionist">Receptionist</label>
+                </td>
+            </tr>
+        </table>
         <div>
-            <input type="radio" name="choice" id="Accountant">
-            <label for="Accountant">Accountant</label>
-
-            <input type="radio" name="choice" id="Software">
-            <label for="Software">Software Engineer</label>
-
-            <input type="radio" name="choice" id="Project">
-            <label for="Project">Project Manager</label>
-
-            <input type="radio" name="choice" id="Receptionist">
-            <label for="Receptionist">Receptionist</label>
+            <label for="hours">Number of working hours in a year:</label> <!-- Label for hours input -->
+            <input type="text" id="hours"> <!-- Input for hours -->
         </div>
-        <div>
-            <label for="hours">Number of working hours in a year:</label>
-            <input type="number" id="hours">
-            <input type="button" id="compute" value="Compute Annual Salary" onclick="calculate()">
-            <label for="result">Annual Salary:</label>
-            <input type="text" id="result">
+        <input type="button" id="compute" value="Compute Annual Salary" onclick="calculate()"
+            style="margin: 5px; padding: 5px;"><br> <!-- Button to compute the salary -->
+        <div><label for="result">Annual Salary:</label> <!-- Label for the result -->
+            <input type="text" id="result"> <!-- Input for displaying the result -->
         </div>
     </form>
-    <!--
-<img src="histogram" alt="histogram describing each job and their hourly rate">
-    -->
-    <table id="table">
-        <thead id="tablehead">
-            <tr>
-                <th>Position</th>
-                <th>Hourly Rate</th>
-            </tr>
-        </thead>
-        <tbody id="tablecontent">
-            <tr>
-                <td>Accountant</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>Project Manager</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Software Engineer</td>
-                <td>35</td>
-            </tr>
-            <tr>
-                <td>Receptionist</td>
-                <td>20</td>
-            </tr>
-        </tbody>
-    </table>
 
+    <footer>
+        <p
+            style="font-size: large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Additionally, check this <a href="https://youtu.be/dQw4w9WgXcQ?si=BFQ5JQ-DQEj_UFA8"
+                target="_blank"><strong>Link</strong></a>
+            out that we thought was cool!</p> <!-- Footer content -->
+    </footer>
 </body>
 <script>
     function calculate() {
-        let position;
+        // JavaScript function to calculate the annual salary
         let hourlyRate;
+        let hours = document.getElementById('hours').value; // Retrieving the input hours
 
-        if (document.getElementById('Accountant').checked) {
-            hourlyRate = 30;
-        } else if (document.getElementById('Software').checked) {
-            hourlyRate = 35;
-        } else if (document.getElementById('Project').checked) {
-            hourlyRate = 50;
-        } else if (document.getElementById('Receptionist').checked) {
-            hourlyRate = 20;
+        if (hours >= 0) {
+            if (document.getElementById('Accountant').checked) {
+                hourlyRate = 30; // Hourly rate for Accountant
+            } else if (document.getElementById('Software').checked) {
+                hourlyRate = 35; // Hourly rate for Software Engineer
+            } else if (document.getElementById('Project').checked) {
+                hourlyRate = 50; // Hourly rate for Project Manager
+            } else if (document.getElementById('Receptionist').checked) {
+                hourlyRate = 20; // Hourly rate for Receptionist
+            } else {
+                alert("Please select a position."); // Alert if no position is selected
+                return;
+            }
+
+            let annualSalary = hourlyRate * hours; // Calculating the annual salary
+
+            document.getElementById('result').value = "$ " + annualSalary; // Displaying the annual salary
         } else {
-            alert("Please select a position.");
-            return;
+            alert("Please enter a valid number of working hours.") // Alert if negative number of working hours submitted
         }
-
-        let hours = document.getElementById('hours').value;
-
-        let annualSalary = hourlyRate * hours;
-
-        document.getElementById('result').value = annualSalary;
     }
 </script>
 
